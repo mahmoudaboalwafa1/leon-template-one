@@ -276,6 +276,12 @@ div.servtext {
  gap: 25px;
 }
 
+div.servtext h1 {
+ width: 300px;
+ max-width: 100%;
+ margin: 0 auto;
+}
+
 div.serv p {
  text-align: left;
  padding: 20px 0 0 60px;
@@ -285,8 +291,20 @@ div.serv p {
  line-height: var(--line-height);
 }
 
+@media (max-width: 600px) {
+ div.servtext {
+  flex-direction: column;
+ }
+
+ div.serv {
+  text-align: center;
+ }
+}
+
 section#services i {
  color: var(--main-color);
+ width: 200px;
+ margin: 0 auto;
 }
 
 /* end services */
@@ -355,15 +373,20 @@ div.about p {
  position: relative;
 }
 
-div.about p.p::after {
- content: "";
- position: absolute;
+hr {
  background-color: var(--main-color);
- height: 2px;
- width: 300px;
+ height: 1px;
+ width: 400px;
  bottom: -30%;
- transform: translate(50%, 50%);
- left: 10%;
+ max-width: 100%;
+ margin-top: 50px;
+ transform: translate(0%, 50%);
+}
+
+@media (max-width: 400px) {
+ hr {
+  width: 250px;
+ }
 }
 
 @media (max-width: 400px) {
@@ -381,7 +404,7 @@ div.about p.p::after {
 }
 
 div.about p:last-of-type {
- padding-top: 50px;
+ padding-top: 40px;
  color: #777;
  line-height: 2;
  font-weight: 400;
